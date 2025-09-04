@@ -28,9 +28,6 @@ jobs:
       - name: Terraform Init
         run: terraform init
         
-      - name: Write tfvars file from secret
-        run: echo "${{ secrets.TF_VARS_CONTENT }}" > terraform.tfvars
-
       - name: Terraform Validate
         run: terraform validate
 
